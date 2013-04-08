@@ -1,6 +1,7 @@
 {
     "name": "devhelp/calendar",
     "homepage": "http://devhelp.pl",
+    "keywords": ["calendar"],
     "license": "MIT",
     "authors": [
         {
@@ -8,6 +9,12 @@
             "email": "pawel.baranski1@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-0": { "Devhelp\\Calendar": "src/" }
+    },
+    "require": {
+        "php": ">=5.3"
+    },
     "require-dev" : {
         "symfony/class-loader": "~2"
     }
