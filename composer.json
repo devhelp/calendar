@@ -1,0 +1,14 @@
+{
+    "name": "devhelp/calendar",
+    "homepage": "http://devhelp.pl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Barański", 
+            "email": "pawel.baranski1@gmail.com"
+        }
+    ],
+    "require-dev" : {
+        "symfony/class-loader": "~2"
+    }
+}
