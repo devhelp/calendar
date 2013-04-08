@@ -114,5 +114,8 @@ you can get days off for defined in the calendar for certain year
 
     $calendar->getDaysOff(2013);
 
+do not worry about duplicated days. This function will only return
+unique ones
+
 if no math needs to be done when calculating days off, then you
 do not have to pass year
