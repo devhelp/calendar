@@ -52,6 +52,20 @@ class DaySetTest extends \PHPUnit_Framework_TestCase
                     new Day(3, 1),
                 ),
             ),
+            array(
+                array(
+                    new Day(1, 5),
+                    new Day(1, 4),
+                    new Day(2, 3),
+                    new Day(3, 2),
+                ),
+                array(
+                    new Day(1, 5),
+                    new Day(1, 4),
+                    new Day(2, 3),
+                    new Day(3, 2),
+                ),
+            ),
         );
     }
 }

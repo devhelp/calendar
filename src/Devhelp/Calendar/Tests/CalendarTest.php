@@ -206,10 +206,6 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    /**
-     * @param type $event
-     * @param type $expected
-     */
     public function testGetDaysOffWithDayRange()
     {
         $definition = $this->getCalendarDefinition();
@@ -248,6 +244,15 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         foreach ($daysOff as $key => $day) {
             $this->assertTrue($expected[$key]->equals($day), "Day at position $key is different");
         }
+    }
+    
+    public function testGetDefinition()
+    {
+        $definition = $this->getCalendarDefinition();
+
+        $calendar = new Calendar($definition);
+        
+        $this->assertEquals($calendar->getDefinition(), $definition);
     }
 
     protected function getCalendarDefinition()
