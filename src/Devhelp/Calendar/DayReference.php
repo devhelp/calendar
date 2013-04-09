@@ -34,7 +34,7 @@ class DayReference
 
         $offset = $this->parseOffset($this->offsetString);
 
-        $this->offsetValue = (integer)$offset['value'];
+        $this->offsetValue = $offset['value'];
         $this->offsetUnit = $offset['unit'];
     }
 
