@@ -27,7 +27,7 @@ class DaySet
     public function add(Day $day)
     {
         if (!$this->has($day)) {
-            $this->days[] = $day;
+            $this->days[$day->getMonth()][$day->getDay()] = $day;
         }
     }
 
@@ -49,21 +49,33 @@ class DaySet
      */
     public function has(Day $day)
     {
-        foreach ($this->days as $dayInSet) {
-            if ($dayInSet->equals($day)) {
-                return true;
-            }
+        if (isset($this->days[$day->getMonth()][$day->getDay()])) {
+            return true;
         }
-
+        
         return false;
     }
 
     /**
-     * Returns array of days from the set
+     * Returns array of days from the set.
+     * Days are in asceding order
      * @return array of Days
      */
     public function getDays()
     {
-        return $this->days;
+        return $this->flattenDaysArray();
+    }
+    
+    protected function flattenDaysArray()
+    {
+        $days = array();
+        
+        foreach ($this->days as $daysInMonth) {
+            foreach ($daysInMonth as $day) {
+                $days[] = $day;
+            }
+        }
+        
+        return $days;
     }
 }
