@@ -23,12 +23,18 @@ class DaySet
     /**
      * Adds Day to a set if it does not already exist
      * @param Day $day
+     * @return booelan true if Day was added, false if it wasn't
      */
     public function add(Day $day)
     {
+        $addedSuccessful = false;
+
         if (!$this->has($day)) {
             $this->days[$day->getMonth()][$day->getDay()] = $day;
+            $addedSuccessful = true;
         }
+
+        return $addedSuccessful;
     }
 
     /**

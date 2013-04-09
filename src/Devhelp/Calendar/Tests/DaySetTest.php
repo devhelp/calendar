@@ -68,4 +68,27 @@ class DaySetTest extends \PHPUnit_Framework_TestCase
             ),
         );
     }
+    
+    /**
+     * @dataProvider providerAddReturnsProperBoolean
+     */
+    public function testAddReturnsProperBoolean($day, $expected)
+    {
+        $days = array(
+            new Day(1, 1),
+            new Day(2, 1),
+        );
+        
+        $set = new DaySet($days);
+        
+        $this->assertEquals($expected, $set->add($day));
+    }
+    
+    public function providerAddReturnsProperBoolean()
+    {
+        return array(
+            array(new Day(1, 1), false),
+            array(new Day(2, 2), true),
+        );
+    }
 }
