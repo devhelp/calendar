@@ -3,7 +3,7 @@
 /build/
 /docs/
 /nbproject/
-/codecoverage/
+/code-coverage/
 /phpunit.xml
 /composer.lock
 /vendor/
