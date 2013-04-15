@@ -147,8 +147,19 @@ class Day
      */
     public function next($year)
     {
+        return $this->modify('+1 day', $year);
+    }
+    
+    /**
+     * Returns Day that is after given offset (calculated for given year)
+     * @param string $offset
+     * @param integer $year
+     * @return Day
+     */
+    public function modify($offset, $year)
+    {
         $dt = $this->toDateTime($year);
-        $dt->modify('+1 day');
+        $dt->modify($offset);
 
         return Day::fromDateTime($dt);
     }
