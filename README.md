@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/devhelp/calendar.png)](https://travis-ci.org/devhelp/calendar)
+
 Credits
 -------
 
