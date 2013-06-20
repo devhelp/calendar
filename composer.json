@@ -13,7 +13,7 @@
         "symfony/class-loader": "~2"
     },
     "autoload": {
-        "psr-0": { "Devhelp": "src/" }
+        "psr-0": { "Devhelp\\Calendar\\": "src/" }
     },
     "require": {
         "php": ">=5.3"
