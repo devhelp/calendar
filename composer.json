@@ -9,9 +9,6 @@
             "email": "pawel.baranski1@gmail.com"
         }
     ],
-    "require-dev" : {
-        "symfony/class-loader": "~2"
-    },
     "autoload": {
         "psr-0": { "Devhelp\\Calendar\\": "src/" }
     },
